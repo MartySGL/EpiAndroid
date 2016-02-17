@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    tools:context="com.epiandroid.activities.UserActivity">
+
+    <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" app:popupTheme="@style/AppTheme.PopupOverlay"  />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:padding="16dp"
+            android:background="#c6c6c6"
+            android:layout_marginTop="52dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/relativeLayout">
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/picture_usr"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/nopicture" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name_usr"
+                android:text="@string/complete_name"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/picture_usr"
+                android:layout_toEndOf="@+id/picture_usr"
+                android:layout_marginLeft="31dp"
+                android:layout_marginStart="31dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mail"
+                android:layout_below="@+id/name_usr"
+                android:layout_alignLeft="@+id/name_usr"
+                android:layout_alignStart="@+id/name_usr"
+                android:layout_marginTop="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/numero"
+                android:layout_alignParentBottom="true"
+                android:layout_alignLeft="@+id/mail"
+                android:layout_alignStart="@+id/mail"
+                android:layout_marginBottom="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/relativeLayout2"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Gpa"
+                android:text="Gpa :"
+                android:textSize="20sp"
+                android:textIsSelectable="false"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Log"
+                android:text="Log :"
+                android:textSize="20sp"
+                android:textIsSelectable="false"
+                android:layout_alignTop="@+id/Gpa"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="84dp"
+                android:layout_marginEnd="84dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gpaval"
+                android:textSize="20sp"
+                android:textIsSelectable="false"
+                android:layout_alignTop="@+id/Gpa"
+                android:layout_toRightOf="@+id/Gpa"
+                android:layout_toEndOf="@+id/Gpa"
+                android:layout_marginLeft="19dp"
+                android:layout_marginStart="19dp"
+                android:textColor="#0dff00" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/logval"
+                android:textSize="20sp"
+                android:textIsSelectable="false"
+                android:layout_marginLeft="52dp"
+                android:layout_marginStart="52dp"
+                android:textColor="#0dff00"
+                android:layout_alignTop="@+id/Log"
+                android:layout_alignLeft="@+id/Log"
+                android:layout_alignStart="@+id/Log" />
+        </RelativeLayout>
+
+        <android.support.design.widget.FloatingActionButton android:id="@+id/fab2"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@android:drawable/ic_menu_call"
+            android:layout_marginBottom="28dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@android:drawable/ic_dialog_email"
+            android:layout_alignTop="@+id/fab2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="28dp"
+            android:layout_marginEnd="28dp" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
